@@ -24,7 +24,7 @@ const TeamChannelPreview = ({ channel, type }) => {
             </div >
         )
     }
-
+    console.log("Sup");
     return (
         <div className={
             channel?.id === activeChannel?.id
@@ -32,9 +32,9 @@ const TeamChannelPreview = ({ channel, type }) => {
                 : 'channel-preview__wrapper'}
             onClick={() => {
                 console.log(channel)
-            }
-            }>
-            {type === 'type' ? <ChannelPreview /> : <DirectPreview />}
+            }}>
+
+            {type === 'team' ? <ChannelPreview /> : <DirectPreview />}
         </div>
     )
 };
